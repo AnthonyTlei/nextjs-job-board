@@ -1,5 +1,6 @@
 import JobFilterSidebar from "@/components/job-filter-sidebar";
 import JobListItem from "@/components/job-list-item";
+import H1 from "@/components/ui/h1";
 import prisma from "@/lib/prisma";
 
 export default async function Home() {
@@ -11,9 +12,7 @@ export default async function Home() {
   return (
     <main className="m-auto my-10 max-w-5xl space-y-10 px-3">
       <div className="space-y-5 text-center">
-        <h1 className="text-4xl font-extrabold tracking-tighter lg:text-5xl">
-          Developer jobs
-        </h1>
+        <H1>Developer Jobs</H1>
         <p>Find your next job.</p>
       </div>
       <section className="flex flex-col gap-4 md:flex-row">
