@@ -55,6 +55,7 @@ const locationSchema = z
       !data.locationType || data.locationType === "Remote" || data.location,
     {
       message: "Must provide a location for non-remote jobs",
+      path: ["location"],
     },
   );
 
