@@ -5,6 +5,7 @@ const requiredString = z.string().min(1, "Required");
 
 const optionalString = z.string().max(500).optional();
 const optionalStringShort = z.string().max(100).optional();
+const optionalStringLong = z.string().optional();
 
 const numericRequiredString = z
   .string()
@@ -68,7 +69,7 @@ export const createJobSchema = z
     ),
     companyName: requiredString.max(100, "Must be 100 characters or less"),
     companyLogo: companyLogoSchema.optional(),
-    description: optionalString,
+    description: optionalStringLong,
     salary: numericRequiredString.max(9, "Must be 9 characters or less"),
   })
   .and(applicationSchema)
